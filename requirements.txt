@@ -1,0 +1,7 @@
+dbt-snowflake
+jupyter 
+pandas 
+snowflake-connector-python
+ipykernel
+python-dotenv
+snowflake-connector-python[pandas]

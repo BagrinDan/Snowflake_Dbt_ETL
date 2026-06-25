@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: CAFEDB
+    schema: BRONZE
+    tables:
+      - name: raw_cafe_sales
