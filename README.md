@@ -9,50 +9,40 @@ The star schema:
 ```mermaid
 erDiagram
     FACT_TRANSACTION {
-        int transaction_id PK
-        int item_key FK
-        int location_key FK
-        int payment_key FK
-        date transaction_date_key FK
-        int quantity
+        varchar transaction_id
+        varchar item_id FK
+        varchar payment_method_id FK
+        varchar location_id FK
+        varchar transaction_date_id FK
+        float price_per_unit
+        int quantities
+        float total_spent
     }
 
     DIM_ITEMS {
-        int item_key PK
-        varchar item_name
-        varchar category
-        varchar brand
-        float unit_price
+        varchar item_id PK
+        varchar items
     }
 
     DIM_LOCATION {
-        int location_key PK
-        varchar store_name
-        varchar city
-        varchar region
-        varchar country
+        varchar location_id PK
+        varchar location
     }
 
     DIM_PAYMENT {
-        int payment_key PK
+        varchar payment_method_id PK
         varchar payment_method
-        varchar payment_provider
-        varchar card_type
     }
 
     DIM_TRANSACTION_DATE {
-        date transaction_date_key FK
-        int year
-        int quarter
-        int month
-        int day
-        boolean is_weekend
+        varchar transaction_date_id PK
+        varchar transaction_date
     }
 
-    FACT_TRANSACTION }|--|| DIM_ITEMS : item_key
-    FACT_TRANSACTION }|--|| DIM_LOCATION : location_key
-    FACT_TRANSACTION }|--|| DIM_PAYMENT : payment_key
-    FACT_TRANSACTION }|--|| DIM_TRANSACTION_DATE : transaction_date_key
+    FACT_TRANSACTION }|--|| DIM_ITEMS : item_id
+    FACT_TRANSACTION }|--|| DIM_LOCATION : location_id
+    FACT_TRANSACTION }|--|| DIM_PAYMENT : payment_method_id
+    FACT_TRANSACTION }|--|| DIM_TRANSACTION_DATE : transaction_date_id
 ```
 
 
