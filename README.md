@@ -1,20 +1,8 @@
 # ETL_SimplePipeline
 
-
 This ETL pipeline uses Snowflake for data storage, dbt for cleaning and transforming data, and Power BI for dashboards.
 
-
-This ETL is based on cafe-store data. 
-We have columns:
-    'TRANSACTION_ID'
-    'ITEMS'
-    'PRICE_PER_UNIT'
-    'QUANTITIES',
-    'TOTAL_SPENT',
-    'PAYMENT_METHOD', 
-    'LOCATION', 
-    'TRANSACTION_DATE' 
-
+This ETL is based on cafe-store data. We have columns: 'TRANSACTION_ID', 'ITEMS', 'PRICE_PER_UNIT', 'QUANTITIES', 'TOTAL_SPENT', 'PAYMENT_METHOD', 'LOCATION', 'TRANSACTION_DATE'.
 
 The star schema:
 
